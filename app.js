@@ -16,10 +16,15 @@ const displaySongs = (songs) => {
             <div class="col-md-9">
               <h3 class="lyrics-name">${song.title}</h3>
               <p class="author lead">Album by <span>${song.artist.name}</span></p>
-            </div>
+               <audio controls>
+                  <source src="${song.preview}" type="audio/mpeg">
+            </audio>
+              </div>
+           
             <div class="col-md-3 text-md-right text-center">
-              <button class="btn btn-success">Get Lyrics</button>
+              <button class="btn btn-success">Lyrics</button>
             </div>
+            
     `;
     songContainer.appendChild(songDiv);
   });
