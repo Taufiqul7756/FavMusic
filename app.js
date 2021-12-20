@@ -5,6 +5,15 @@
 //   const data = await res.json();
 //   displaySongs(data.data);
 // };
+
+document
+  .getElementById("search-field")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      document.getElementById("search-btn").click();
+    }
+  });
+
 const searchSongs = () => {
   const lyricsGet = document.getElementById("song-lyrics");
   lyricsGet.innerText = "";
